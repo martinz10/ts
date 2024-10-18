@@ -1,0 +1,20 @@
+.
+├── app/
+│   ├── main.py            # FastAPI application
+│   ├── models.py          # SQLAlchemy models for the database
+│   ├── database.py        # Database configuration
+│   └── Dockerfile         # Docker setup for the FastAPI app
+├── docker-compose.yml     # Docker Compose setup for the entire environment
+├── README.md              # Project documentation (this file)
+└── requirements.txt       # Python dependencies
+
+
+API Endpoints
+
+GET	/products	Get a list of all products
+GET	/product/{product_id}	Get details of a specific product
+POST	/product	Create a new product
+PUT	/product/{product_id}	Update an existing product
+DELETE	/product/{product_id}	Delete a product
+
+redoc/docs
