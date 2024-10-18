@@ -1,0 +1,12 @@
+.
+├── app/
+│   └── spark_job.py         # Spark script to process the data
+├── data/
+│   └── marketing_sample_for_careerbuilder_usa-careerbuilder_job_listing__20200401_20200630__30k_data.ldjson # LDJSON input file (Place it here)
+├── output/                  # for the exported CSV files
+│   ├── daily_jobs_per_city.csv
+│   ├── avg_salary_per_job_title.csv
+│   └── top_companies.csv
+├── Dockerfile               # Docker setup for running Spark job
+├── docker-compose.yml       # Docker Compose setup to build and run the container
+└── README.md                # Project documentation
