@@ -1,0 +1,15 @@
+version: '3'
+services:
+  spark:
+    build: .
+    container_name: spark_container
+    environment:
+      - SPARK_MASTER_HOST=spark-master
+    volumes:
+      - ./data:/opt/spark-app/data
+      - ./output:/opt/spark-app/output
+    ports:
+      - "4041:4040"  # For Spark UI
+
+
+

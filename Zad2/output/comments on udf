@@ -1,0 +1,11 @@
+Koristio sam BeautifulSoup u standardnom Python UDF-u za ciscenje HTML-a iz opisa poslova,iako to nije najbolje resenje 
+jer UDF-ovi rade red po red i zbog toga dolazi do sporog procesa zbog serijalizacije podataka između Spark-a (JVM) i Python-a.
+Ako bih hteo bolje resenje da unapredim performanse, mogu preci na Pandas UDF-ove, koji omogućavaju obradu u batchevima, 
+sto smanjuje troskove serijalizacije i ubrzava proces.
+
+#from pyspark.sql.functions import pandas_udf
+@pandas_udf(StringType())
+	def clean_html_udf()
+
+ Sto se tice ovog zadatka. BeatifulSoup je mnogo bolja opcija nego regex izrazi zbog kompleksnosti zadatka koji bi regex imao da parsira
+ nepravilne html elemente i tesko obradive ugnjezdene elemente.
